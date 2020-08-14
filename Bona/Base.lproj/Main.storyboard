@@ -1,24 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="owx-2q-sae">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Роллы-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bona" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Роллы" image="rolls2" id="KvR-Ai-xBB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="670" y="1106"/>
+        </scene>
+        <!--Заказы-->
+        <scene sceneID="pfJ-5V-WzN">
+            <objects>
+                <viewController id="0MQ-OB-EOo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ak-zH-uXx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JeC-xW-ppf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Заказы" image="list" id="Z65-ou-Cej"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkH-FT-O95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="1867"/>
+        </scene>
+        <!--Пицца-->
+        <scene sceneID="Hlw-t4-NQd">
+            <objects>
+                <viewController id="ISA-OK-EJp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfg-Kd-qfj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mHv-uI-p1T"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Пицца" image="pizza" id="jcV-vH-FNk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6QS-DO-Tkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="403"/>
+        </scene>
+        <!--Акции-->
+        <scene sceneID="50m-ty-ERW">
+            <objects>
+                <viewController id="JFb-u5-umx" customClass="PromotionalOffers" customModule="Bona" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KjZ-4V-TxF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="insetGrouped" separatorStyle="none" allowsSelection="NO" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UoX-AA-eOa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IdentifierNews" id="bBz-XN-B2z" customClass="CastomCellNews" customModule="Bona" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="55.5" width="345" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bBz-XN-B2z" id="DJ7-Me-Ve3">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cNH-r8-qIH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="KaQ-gl-lcJ"/>
+                                                        <constraint firstAttribute="width" constant="600" id="LK8-fs-lt8"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cNH-r8-qIH" firstAttribute="top" secondItem="DJ7-Me-Ve3" secondAttribute="top" id="44E-Cd-rOj"/>
+                                                <constraint firstAttribute="trailing" secondItem="cNH-r8-qIH" secondAttribute="trailing" id="TUb-at-hkQ"/>
+                                                <constraint firstItem="cNH-r8-qIH" firstAttribute="leading" secondItem="DJ7-Me-Ve3" secondAttribute="leading" id="jz9-2q-rIc"/>
+                                                <constraint firstAttribute="bottom" secondItem="cNH-r8-qIH" secondAttribute="bottom" id="psh-AW-50j"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsImageView" destination="cNH-r8-qIH" id="Pz0-4s-Mbu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UoX-AA-eOa" firstAttribute="leading" secondItem="Ocf-QX-QYZ" secondAttribute="leading" id="8NL-Jm-5qx"/>
+                            <constraint firstItem="UoX-AA-eOa" firstAttribute="top" secondItem="Ocf-QX-QYZ" secondAttribute="top" id="8gI-KW-A7e"/>
+                            <constraint firstItem="Ocf-QX-QYZ" firstAttribute="bottom" secondItem="UoX-AA-eOa" secondAttribute="bottom" id="diV-tl-7q7"/>
+                            <constraint firstItem="Ocf-QX-QYZ" firstAttribute="trailing" secondItem="UoX-AA-eOa" secondAttribute="trailing" id="q4k-oe-6U7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ocf-QX-QYZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Акции" image="newspaper" id="jbF-Pr-VFz"/>
+                    <connections>
+                        <outlet property="PromotionalOffersTableView" destination="UoX-AA-eOa" id="oIm-da-3cv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXo-Ft-KcO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669.60000000000002" y="-287.40629685157421"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xbT-Cq-YJZ">
+            <objects>
+                <tabBarController id="owx-2q-sae" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EQk-Q1-98b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JFb-u5-umx" kind="relationship" relationship="viewControllers" id="IeS-Nx-vXK"/>
+                        <segue destination="ISA-OK-EJp" kind="relationship" relationship="viewControllers" id="QUA-Zr-jV1"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2Dx-8a-dPA"/>
+                        <segue destination="0MQ-OB-EOo" kind="relationship" relationship="viewControllers" id="SIx-e6-v74"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGB-j5-fwQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285" y="741"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list" width="32" height="32"/>
+        <image name="newspaper" width="32" height="32"/>
+        <image name="pizza" width="32" height="32"/>
+        <image name="rolls2" width="32" height="32"/>
+    </resources>
 </document>
