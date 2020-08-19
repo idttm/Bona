@@ -7,17 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1D950624E94B0700707C63 /* PizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1D950524E94B0700707C63 /* PizzaViewController.swift */; };
+		3E1D950824E94D1200707C63 /* CastomCellPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1D950724E94D1200707C63 /* CastomCellPizza.swift */; };
+		3E1D950A24E980A500707C63 /* InformationPizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1D950924E980A500707C63 /* InformationPizzaViewController.swift */; };
 		3E3E77E324D999480013E318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E77E224D999480013E318 /* AppDelegate.swift */; };
 		3E3E77E524D999480013E318 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E77E424D999480013E318 /* SceneDelegate.swift */; };
 		3E3E77E724D999480013E318 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E77E624D999480013E318 /* ViewController.swift */; };
 		3E3E77EA24D999480013E318 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3E77E824D999480013E318 /* Main.storyboard */; };
 		3E3E77EC24D9994F0013E318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E3E77EB24D9994F0013E318 /* Assets.xcassets */; };
 		3E3E77EF24D9994F0013E318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3E77ED24D9994F0013E318 /* LaunchScreen.storyboard */; };
+		3E5426D924EBEBF300F5DE27 /* cellContetensStructur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5426D824EBEBF300F5DE27 /* cellContetensStructur.swift */; };
 		3EAF3DD924E549E700A036BE /* PromotionalOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF3DD824E549E700A036BE /* PromotionalOffers.swift */; };
 		3EAF3DDB24E56E1B00A036BE /* CastomCellNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF3DDA24E56E1B00A036BE /* CastomCellNews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1D950524E94B0700707C63 /* PizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaViewController.swift; sourceTree = "<group>"; };
+		3E1D950724E94D1200707C63 /* CastomCellPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastomCellPizza.swift; sourceTree = "<group>"; };
+		3E1D950924E980A500707C63 /* InformationPizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPizzaViewController.swift; sourceTree = "<group>"; };
 		3E3E77DF24D999480013E318 /* Bona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3E77E224D999480013E318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E3E77E424D999480013E318 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +33,7 @@
 		3E3E77EB24D9994F0013E318 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E3E77EE24D9994F0013E318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E3E77F024D9994F0013E318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E5426D824EBEBF300F5DE27 /* cellContetensStructur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellContetensStructur.swift; sourceTree = "<group>"; };
 		3EAF3DD824E549E700A036BE /* PromotionalOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionalOffers.swift; sourceTree = "<group>"; };
 		3EAF3DDA24E56E1B00A036BE /* CastomCellNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastomCellNews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +73,11 @@
 				3E3E77E624D999480013E318 /* ViewController.swift */,
 				3E3E77E824D999480013E318 /* Main.storyboard */,
 				3EAF3DD824E549E700A036BE /* PromotionalOffers.swift */,
+				3E1D950524E94B0700707C63 /* PizzaViewController.swift */,
+				3E1D950724E94D1200707C63 /* CastomCellPizza.swift */,
+				3E1D950924E980A500707C63 /* InformationPizzaViewController.swift */,
 				3EAF3DDA24E56E1B00A036BE /* CastomCellNews.swift */,
+				3E5426D824EBEBF300F5DE27 /* cellContetensStructur.swift */,
 				3E3E77EB24D9994F0013E318 /* Assets.xcassets */,
 				3E3E77ED24D9994F0013E318 /* LaunchScreen.storyboard */,
 				3E3E77F024D9994F0013E318 /* Info.plist */,
@@ -145,10 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E3E77E724D999480013E318 /* ViewController.swift in Sources */,
+				3E1D950824E94D1200707C63 /* CastomCellPizza.swift in Sources */,
 				3E3E77E324D999480013E318 /* AppDelegate.swift in Sources */,
 				3E3E77E524D999480013E318 /* SceneDelegate.swift in Sources */,
 				3EAF3DD924E549E700A036BE /* PromotionalOffers.swift in Sources */,
+				3E1D950A24E980A500707C63 /* InformationPizzaViewController.swift in Sources */,
+				3E5426D924EBEBF300F5DE27 /* cellContetensStructur.swift in Sources */,
 				3EAF3DDB24E56E1B00A036BE /* CastomCellNews.swift in Sources */,
+				3E1D950624E94B0700707C63 /* PizzaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
