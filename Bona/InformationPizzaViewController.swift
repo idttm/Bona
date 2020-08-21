@@ -63,6 +63,7 @@ class InformationPizzaViewController : UIViewController {
             sizePizzaSegmentedControl.insertSegment(withTitle: config.pizzaSize.text, at: index, animated: false)
         }
         sizePizzaSegmentedControl.selectedSegmentIndex = 0
+        
     }
 
     @IBAction func makeOrder(_ sender: UIButton) {
@@ -77,14 +78,15 @@ class InformationPizzaViewController : UIViewController {
     @IBAction func didChangeValue(_ sender: UIStepper) {
         pizzaCounter = Int(sender.value)
         quantityLabel.text = String(pizzaCounter)
-        priceLabel.text = 
+        guard let pizza = selectedPizza else { return }
+        let configuration =  pizza.pizzaConfigurations[sizePizzaSegmentedControl.selectedSegmentIndex]
+        priceLabel.text = "\(Double(pizzaCounter) * configuration.price) ₴"
 
-        
     }
 
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         guard let config = selectedPizza?.pizzaConfigurations[sender.selectedSegmentIndex] else { return }
-        priceLabel.text = "\(config.price) ₴"
+        priceLabel.text = "\(Double(pizzaCounter) * config.price) ₴"
         
     }
 }
