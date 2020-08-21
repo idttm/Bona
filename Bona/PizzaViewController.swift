@@ -13,32 +13,48 @@ class PizzaViewController: UIViewController {
     
     
     @IBOutlet weak var pizzaTableView: UITableView!
-
-    let arrayCellContents = PizzaDataHolder.shared.pizzas
+    @IBOutlet weak var orderButton: UIView!
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    let availablePizzas = PizzaDataHolder.shared.pizzas
+    var cartManager: CartManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pizzaTableView.dataSource = self
 //        pizzaTableView.delegate = self
     }
-    
-    
-//    @IBAction func toBasketButtonAction(_ sender: UIButton) {
-//
-//
-//    }
 
     func showAddToCartVC(indexPath: IndexPath) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let newViewController = storyboard.instantiateViewController(identifier: "InforfationVC") as? InformationPizzaViewController else { return  }
-        newViewController.setupWith(pizza: arrayCellContents[indexPath.section])
+        guard let newViewController = storyboard?.instantiateViewController(identifier: "InforfationVC") as? InformationPizzaViewController else { return  }
+        newViewController.selectedPizza = availablePizzas[indexPath.section]
+        newViewController.makeOrderAction = { [weak self] pizzaOrder in
+            if self?.cartManager != nil {
+                self?.cartManager?.addToCart(pizzaOrder: pizzaOrder)
+            } else {
+                let order = Order(pizzaOrders: [pizzaOrder])
+                self?.cartManager = CartManager(order: order)
+                self?.orderButton.isHidden = false
+            }
+            self?.updateCart()
+        }
         present(UINavigationController(rootViewController: newViewController), animated: true, completion: nil)
+    }
+
+    func updateCart() {
+        guard let manager = cartManager else { return }
+        quantityLabel.text = "\(manager.overalQuantity)"
+        priceLabel.text = "\(manager.overallPrice) ₴"
+    }
+
+    @IBAction func makeOrderAction(_ sender: UIButton) {
     }
 }
 extension PizzaViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return arrayCellContents.count
+        return availablePizzas.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,9 +67,9 @@ extension PizzaViewController: UITableViewDataSource {
         cell.buttonAction = { [weak self] in
             self?.showAddToCartVC(indexPath: indexPath)
         }
-        cell.imagePizzaView.image = arrayCellContents[indexPath.section].image
-        cell.namePizzView.text = arrayCellContents[indexPath.section].name
-        cell.pricePizzaView.text = arrayCellContents[indexPath.section].price
+        cell.imagePizzaView.image = availablePizzas[indexPath.section].image
+        cell.namePizzView.text = availablePizzas[indexPath.section].name
+        cell.pricePizzaView.text = "\(availablePizzas[indexPath.section].pizzaConfigurations.first?.price ?? -1) ₴"
         return cell
     }
 }

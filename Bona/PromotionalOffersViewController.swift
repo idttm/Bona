@@ -9,18 +9,19 @@
 import Foundation
 import UIKit
 
-class PromotionalOffers: UIViewController {
+class PromotionalOffersViewController: UIViewController {
     
-    @IBOutlet weak var PromotionalOffersTableView: UITableView!
+    @IBOutlet weak var promotionalOffersTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PromotionalOffersTableView.dataSource = self
+        promotionalOffersTableView.dataSource = self
     }
     
     var arrayImegeNews : [UIImage] = [(UIImage(named: "oneRoll.png"))!,(UIImage(named: "pizzaMuchPieces.png"))!,(UIImage(named: "pizzaOnePiece.png"))!,(UIImage(named: "rollsOnDesk.png"))!,]
 }
-extension PromotionalOffers: UITableViewDataSource {
+
+extension PromotionalOffersViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return arrayImegeNews.count

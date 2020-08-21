@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
-struct CellContents {
+struct Pizza {
     let name: String
-    let price: String
-    let image: UIImage 
+    let image: UIImage
+    let pizzaConfigurations: [PizzaConfiguration]
+}
+
+struct PizzaConfiguration {
+    let price: Double
+    let pizzaSize: PizzaSize
 }
 
 class PizzaDataHolder {
@@ -20,13 +25,13 @@ class PizzaDataHolder {
     static let shared = PizzaDataHolder()
 
     let pizzas = [
-        CellContents(name: "Гавайская", price: "₴ 145", image: (UIImage(named: "hawaiian.png"))!),
-        CellContents(name: "Баварская", price: "₴ 155", image: (UIImage(named: "bavarian.png"))!),
-        CellContents(name: "Азиатская", price: "₴ 149", image: (UIImage(named: "asiatic.png"))!),
-        CellContents(name: "Цезарь", price: "₴ 169", image: (UIImage(named: "caesar.png"))!),
-        CellContents(name: "Маргарита", price: "₴ 109", image: (UIImage(named: "margarita.png"))!),
-        CellContents(name: "Паперти", price: "₴ 145", image: (UIImage(named: "pepperoni.png"))!),
-        CellContents(name: "Греческая", price: "₴ 169", image: (UIImage(named: "greek.png"))!)
+        Pizza(name: "Гавайская", image: (UIImage(named: "hawaiian.png"))!, pizzaConfigurations: [PizzaConfiguration(price: 145, pizzaSize: .small), PizzaConfiguration(price: 160, pizzaSize: .medium)]),
+        Pizza(name: "Баварская", image: (UIImage(named: "bavarian.png"))!, pizzaConfigurations: [PizzaConfiguration(price: 145, pizzaSize: .small), PizzaConfiguration(price: 160, pizzaSize: .large)]),
+        Pizza(name: "Азиатская", image: (UIImage(named: "asiatic.png"))!, pizzaConfigurations: [PizzaConfiguration(price: 145, pizzaSize: .small), PizzaConfiguration(price: 160, pizzaSize: .medium)]),
+        Pizza(name: "Цезарь", image: (UIImage(named: "caesar.png"))!, pizzaConfigurations: [PizzaConfiguration(price: 145, pizzaSize: .small), PizzaConfiguration(price: 160, pizzaSize: .medium)]),
+        Pizza(name: "Маргарита",image: (UIImage(named: "margarita.png"))!, pizzaConfigurations: [PizzaConfiguration(price: 145, pizzaSize: .small), PizzaConfiguration(price: 160, pizzaSize: .medium)]),
+        Pizza(name: "Паперти", image: (UIImage(named: "pepperoni.png"))!, pizzaConfigurations: [PizzaConfiguration(price: 145, pizzaSize: .small), PizzaConfiguration(price: 160, pizzaSize: .medium)]),
+        Pizza(name: "Греческая", image: (UIImage(named: "greek.png"))!, pizzaConfigurations: [PizzaConfiguration(price: 145, pizzaSize: .small), PizzaConfiguration(price: 160, pizzaSize: .medium)])
     ]
 
 
